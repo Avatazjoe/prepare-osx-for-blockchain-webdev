@@ -1,11 +1,14 @@
 Prepare OSX for WebDev
 ======================
 
-Script to prepare Mac OSX with basic command-line tools and for web development:
+Script for use by students in [Blockchain University](http://www.blockchainu.co) classes to prepare Mac OSX 10.10 Yosemite with basic command-line tools, blockchain web development tools & frameworks.
 
 > https://github.com/ChristopherA/prepare-osx-for-webdev
 
 This script largely uses [Homebrew](http://home.sh) to install web development tools and frameworks. Homebrew makes installation and updates of tools very easy: it compiles versions from current sources, it has the advantage of automatically resolving external dependencies on other tools, and you can later remove packages and items that Homebrew has installed without compromising the integrity of your system.
+
+Forked from:
+    https://github.com/ChristopherA/prepare-osx-for-webdev
 
 Originally based on `allosxupdates.sh` from Christopher Allen's .dotfiles -- modified to add some Mac user interface, install fewer tools, and to stand alone without dependencies from other .dotfiles.
 
@@ -20,7 +23,7 @@ If not a fresh install, you should at least need to upgrade your Mac to OS X 10.
 
 Execute this command via the Terminal app's command line interface (`command` + `space` + `terminal`):
 
-`curl -L https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/prepare-osx-for-webdev.sh | bash`
+`curl -L https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchian-webdev/master/prepare-osx-for-blockchian-webdev.sh | bash`
 
 WARNING: Be careful about using `curl` piped `|` to `bash` or any other shell as it can compromise your system. Only execute if you trust the source!
 
@@ -34,7 +37,7 @@ It is safe to run `brew doctor` or run this entire script multiple times.
 
 If you have an existing `~/.bash_profile` you will need to manually edit this files to set environment variables as per:
 
-> https://github.com/ChristopherA/prepare-osx-for-webdev/blob/master/bash_profile.local
+> https://github.com/blockchainu/prepare-osx-for-blockchian-webdev/blob/master/bash_profile.local
 
 What It Does
 ------------
@@ -43,6 +46,8 @@ The script basically automates parts **2 - Preparation and Installation"** &
 **"3 - Customize Your Environment"** from the _Introduction to the Mac Command Line_ tutorial at:
 
 > https://github.com/ChristopherA/intro-mac-command-line
+
+It also installs some blockchain specific tools and frameworks for [Blockchain University](http://www.blockchainu.co) classes.
 
 * Installs all Mac OSX System Updates
 * Install current "OSX Command Line Tools"
