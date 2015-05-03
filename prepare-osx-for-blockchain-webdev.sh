@@ -1,15 +1,19 @@
 #!/bin/bash
 
-# Originally from Christopher Allen's dotfiles
-#   https://github.com/ChristopherA/dotfiles/blob/master/install/allosxupdates.sh
+# Script for use by students in Blockchain University classes to prepare Mac OSX 10.10 Yosemite
+# with basic command-line tools, blockchain web development tools & frameworks.
 
-# Modified to only install basic command-line utilities and webdev files,
-# such as python and node, without dependencies on other install files
-#   https://github.com/ChristopherA/prepare-osx-for-webdev
+# Forked from: https://github.com/ChristopherA/prepare-osx-for-webdev, adding some some
+# blockchain specific tools and frameworks for use by Blockchain University classes.
+
+# Originally based on allosxupdates.sh from Christopher Allen's .dotfiles
+# `https://github.com/ChristopherA/dotfiles/blob/master/install/allosxupdates.sh`
+# modified to add some Mac user interface, install fewer tools, and to stand alone without
+# dependencies from other .dotfiles.
 
 # Execute on a new machine via:
 
-# $ curl -L https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/prepare-osx-for-webdev.sh | bash
+# $ curl -L https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/prepare-osx-for-blockchain-webdev.sh | bash
 
 # WARNING: Be careful about using `curl` piped `|` to bash or any other shell
 # as it can compromise your system. Only execute if you trust the source!
@@ -366,7 +370,7 @@ if [[ `uname` == 'Darwin' ]]; then
     # Use a modified version of the Solarized Dark theme by default in Terminal.app
     CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
     if [ "${CURRENT_PROFILE}" != "solarized-dark" ]; then
-      wget https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/solarized-dark.terminal
+      wget https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/solarized-dark.terminal
     	open "~/solarized-dark.terminal";
     	sleep 5; # Wait a bit to make sure the theme is loaded
         # !!! NOTE THE FOLLOWING DOES NOT WORK IN 10.10
@@ -376,19 +380,19 @@ if [[ `uname` == 'Darwin' ]]; then
     fi;
 
     if [ ! -f "~/.bash_profile" ]; then
-      wget https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/bash_profile;
+      wget https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/bash_profile;
       mv ./bash_profile ~/.bash_profile;
       echo "New ~/.bash_profile created.";
     fi
 
     if [ ! -f "~/.gitignore_global" ]; then
-      wget https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/gitignore_global;
+      wget https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/gitignore_global;
       mv ./gitignore_global ~/.gitignore_global;
       echo "New ~/.gitignore_global created.";
     fi
 
     if [ ! -f "~/.bash_profile.local" ]; then
-      wget https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/bash_profile.local;
+      wget https://raw.githubusercontent.com/blockchain/prepare-osx-for-blockchain-webdev/master/bash_profile.local;
       mv ./bash_profile.local ~/.bash_profile.local;
       echo "New ~/.bash_profile.local created.";
 
