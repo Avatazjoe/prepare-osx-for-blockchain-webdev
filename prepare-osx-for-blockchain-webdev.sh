@@ -370,13 +370,13 @@ if [[ `uname` == 'Darwin' ]]; then
     # Use a modified version of the Solarized Dark theme by default in Terminal.app
     CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
     if [ "${CURRENT_PROFILE}" != "solarized-dark" ]; then
-      wget https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/solarized-dark.terminal
-    	open "~/solarized-dark.terminal";
+      wget https://raw.githubusercontent.com/ChristopherA/prepare-osx-for-webdev/master/solarized-dark.terminal
+    	open ~/solarized-dark.terminal;
     	sleep 5; # Wait a bit to make sure the theme is loaded
         # !!! NOTE THE FOLLOWING DOES NOT WORK IN 10.10
       	# defaults write com.apple.terminal 'Default Window Settings' -string "solarized-dark";
       	# defaults write com.apple.terminal 'Startup Window Settings' -string "solarized-dark";
-      rm "~/solarized-dark.terminal";
+      rm ~/solarized-dark.terminal;
     fi;
 
     if [ ! -f "~/.bash_profile" ]; then
