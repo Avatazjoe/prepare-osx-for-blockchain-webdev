@@ -176,6 +176,10 @@ if [[ `uname` == 'Darwin' ]]; then
 
     if [ ! -d ~/Applications ]; then mkdir ~/Applications; fi
 
+    echo -e "\n    Creating ~/projects if it doesn't exist"
+
+    if [ ! -d ~/projects ]; then mkdir ~/projects; fi
+
     # Install Homebrew http://brew.sh if exits, force via curl if necessary
 
       # Check for Homebrew
