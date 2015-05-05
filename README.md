@@ -23,7 +23,7 @@ If not a fresh install, you should at least need to upgrade your Mac to OS X 10.
 
 Execute this command via the Terminal app's command line interface (`command` + `space` + `terminal`):
 
-`curl -L https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/prepare-osx-for-blockchian-webdev.sh | bash`
+`curl -L https://raw.githubusercontent.com/blockchainu/prepare-osx-for-blockchain-webdev/master/prepare-osx-for-blockchain-webdev.sh | bash`
 
 WARNING: Be careful about using `curl` piped `|` to `bash` or any other shell as it can compromise your system. Only execute if you trust the source!
 
@@ -37,7 +37,7 @@ It is safe to run `brew doctor` or run this entire script multiple times.
 
 If you have an existing `~/.bash_profile` you will need to manually edit this files to set environment variables as per:
 
-> https://github.com/blockchainu/prepare-osx-for-blockchian-webdev/blob/master/bash_profile.local
+> https://github.com/blockchainu/prepare-osx-for-blockchain-webdev/blob/master/bash_profile.local
 
 What It Does
 ------------
